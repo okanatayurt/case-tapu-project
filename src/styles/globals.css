@@ -1,0 +1,41 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  @apply box-border;
+}
+:focus {
+  @apply outline-none;
+}
+a,
+select {
+  @apply select-none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  @apply appearance-none;
+}
+[data-rsbs-overlay],
+[data-rsbs-backdrop],
+[data-rsbs-root]:after {
+  @apply z-[999];
+}
+
+html,
+body {
+  @apply fixed top-0 bottom-0 overflow-hidden text-black;
+}
+
+#__next {
+  @apply flex flex-col w-screen h-full overflow-x-hidden overflow-y-auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
