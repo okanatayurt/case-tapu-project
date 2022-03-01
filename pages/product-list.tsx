@@ -59,13 +59,14 @@ export default function ProductList({ products }: IProductListPageProps) {
 
 export const getServerSideProps = async () => {
   // Get ProductDetail
-  const response = await api.get(
+  const response = await fetch(
     "https://case-tapu-placeholder.herokuapp.com/products"
   );
+  const data = await response.json();
 
   return {
     props: {
-      products: response.data.products,
+      products: data.products,
     },
   };
 };
